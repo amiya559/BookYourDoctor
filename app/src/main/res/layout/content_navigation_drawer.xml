@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="20dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".NavigationDrawerActivity"
+    tools:showIn="@layout/app_bar_navigation_drawer">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/myViewPager"></androidx.viewpager.widget.ViewPager>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/maven_pro_medium"
+            android:text="Hey User,"
+            android:textColor="#050505"
+            android:textSize="17sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="#050505"
+            android:fontFamily="@font/maven_pro_medium"
+            android:text="What are you looking for?"
+            android:textSize="17sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:src="@drawable/dashboardimage"
+            android:onClick="dasboardImageBtn"
+            android:scaleType="fitCenter"
+            ></ImageView>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

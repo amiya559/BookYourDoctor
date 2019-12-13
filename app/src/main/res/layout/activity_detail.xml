@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".DetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/ivImage"
+        android:src="@drawable/doctor1"
+        android:scaleType="centerCrop"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Title"
+        android:textColor="#050505"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/ic_doctorname"
+        android:textStyle="bold"
+        android:fontFamily="@font/maven_pro_medium"
+        android:textSize="20sp"
+        android:id="@+id/txtDoctorName"
+        />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/txtSpecialization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Specialization"
+            android:drawablePadding="20dp"
+            android:drawableLeft="@drawable/ic_doctorspecialization"
+            android:fontFamily="@font/maven_pro_medium"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/txtPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:fontFamily="@font/maven_pro_medium"
+            android:drawablePadding="20dp"
+            android:drawableLeft="@drawable/ic_doctorprice"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="16sp"
+        android:fontFamily="@font/maven_pro_medium"
+        android:drawablePadding="20dp"
+        android:drawableLeft="@drawable/ic_doctorlocation"
+        android:id="@+id/txtLocation"
+        android:textStyle="bold"
+    />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Days"
+            android:textSize="16sp"
+            android:fontFamily="@font/maven_pro_medium"
+            android:drawablePadding="20dp"
+            android:drawableLeft="@drawable/ic_doctordays"
+            android:id="@+id/txtDays"
+            android:textStyle="bold"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/maven_pro_medium"
+        android:drawableLeft="@drawable/ic_doctordescription"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        android:id="@+id/txtDescription"
+        />
+
+
+        <ProgressBar
+            android:id="@+id/loginProgressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:onClick="bookNowBtn"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/maven_pro_medium"
+            android:text="B O O K    N O W"
+            android:background="@drawable/round_btn"
+            android:textColor="#FF6C02"
+            android:textAlignment="center"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+</ScrollView>

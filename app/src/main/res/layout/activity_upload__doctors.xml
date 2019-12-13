@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".Upload_Doctors">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="30dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/iv_doctorImage"
+            android:src="@drawable/imagenotavailable"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/txt_doctor_name"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Specialization"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:id="@+id/text_specialization"
+            />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_doctor_gender"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint="Brief Description(Experience,Age,Achievements etc..)"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_doctor_location"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Days"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_doctor_days"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Price"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/txt_doctor_price"
+            />
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Locations(With Full Address Of That Pharmacy)"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="15sp"
+            android:id="@+id/text_description"
+            />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="S e l e c t     I m a g e"
+            android:textSize="13sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/maven_pro_medium"
+            android:background="@drawable/round_button"
+            android:textColor="#fff"
+            android:onClick="btnSelectImage"
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="U p l o a d"
+            android:textAlignment="center"
+            android:fontFamily="@font/maven_pro_medium"
+            android:textSize="13sp"
+            android:background="@drawable/round_button"
+            android:textColor="#fff"
+            android:onClick="btnUploadDoctors"
+            />
+
+    </LinearLayout>
+
+</ScrollView>
+

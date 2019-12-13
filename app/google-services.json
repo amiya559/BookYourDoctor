@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "996281749174",
+    "firebase_url": "https://bookurdoctor-491ec.firebaseio.com",
+    "project_id": "bookurdoctor-491ec",
+    "storage_bucket": "bookurdoctor-491ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:996281749174:android:90d0a0686ff509152ca017",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "996281749174-p2rsvch05bma11gfji2dnggkfmdbm81m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.demo",
+            "certificate_hash": "ca3a6a7329c2d7b6b843a8e0d6b5837e0e6a3c3a"
+          }
+        },
+        {
+          "client_id": "996281749174-pn22jcj420r0nqgcuddvbdavj7panp4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiFYnKl_cw-zoXcnT1SlLCkS_cguGszas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "996281749174-pn22jcj420r0nqgcuddvbdavj7panp4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

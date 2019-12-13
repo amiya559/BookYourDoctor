@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:iconTint="#fff"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_my_doctors"
+            android:iconTint="#fff"
+            android:icon="@drawable/ic_format_list_bulleted_black_24dp"
+            android:title="My Doctors" />
+
+        <item
+            android:id="@+id/nav_appointment"
+            android:icon="@drawable/ic_library_books_black_24dp"
+            android:title="My Appointments"
+            android:iconTint="#fff"/>
+
+        <item
+            android:id="@+id/nav_print_appointment_letter"
+            android:icon="@drawable/ic_description_black_24dp"
+            android:iconTint="#fff"
+            android:title="Print Appointment Letter" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:iconTint="#fff"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:iconTint="#fff"
+            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:title="Logout" />
+
+    </group>
+
+
+
+</menu>

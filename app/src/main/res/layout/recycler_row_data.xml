@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="3dp"
+        android:layout_margin="4dp"
+        app:cardUseCompatPadding="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_weight="2"
+                android:scaleType="fitCenter"
+                android:src="@drawable/doctor1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:weightSum="2"
+                android:layout_weight="3"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/maven_pro_medium"
+                        android:textColor="#050505"
+                        android:maxLines="1"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/doctornamesmall"
+                        android:text="Title"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/tvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/maven_pro_medium"
+                        android:drawableLeft="@drawable/ic_doctorlocationsmall"
+                        android:text="Description"
+                        android:maxLines="2"
+                        android:layout_marginTop="5dp"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/maven_pro_medium"
+                        android:maxLines="1"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/ic_doctordayssmall"
+                        android:text="Days"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="Location"
+                        android:fontFamily="@font/maven_pro_medium"
+                        android:drawablePadding="10dp"
+                        android:drawableLeft="@drawable/ic_doctordescriptionsmall"
+                        android:textStyle="italic"
+                        android:maxLines="2"
+                        android:textSize="14sp" />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:text="Gender"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_doctorgender"
+                            android:textStyle="bold"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14sp" />
+
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp" />
+                        <TextView
+                            android:id="@+id/tvSpecialization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Specialization"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_doctorspecializationsmall"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp" />
+
+                        <TextView
+                            android:id="@+id/tvPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:drawablePadding="10dp"
+                            android:drawableLeft="@drawable/ic_doctorpricesmall"
+                            android:fontFamily="@font/maven_pro_medium"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
