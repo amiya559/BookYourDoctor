@@ -23,7 +23,7 @@
             android:textColor="#FF6C02"
             android:fontFamily="@font/maven_pro_medium"
             android:textStyle="bold"
-            android:text="Please Provide Patient Details"
+            android:text="Please Provide Booking Details"
             android:textSize="20dp"/>
 
         <RadioGroup
@@ -118,10 +118,30 @@
             android:id="@+id/patient_address"
             />
 
+        <EditText
+            android:id="@+id/appointment_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Pick Your Appointment Date(dd-mm-yy)"
+            android:textSize="15sp" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/pick_appointment_date"
+            android:text="Pick Date"
+            android:onClick="btn_pickDate"
+            />
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
         <Button
+            android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="c o n f i r m    b o o k i n g"

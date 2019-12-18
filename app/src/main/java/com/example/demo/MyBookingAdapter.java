@@ -41,13 +41,14 @@ public class MyBookingAdapter extends RecyclerView.Adapter<BookingViewHolder> {
 
         holder.mBookingDate.setText("Booking Date: " + myBookingList.get(i).getBookingDate());
         holder.mBookingTime.setText("Booking Time: " + myBookingList.get(i).getBookingTime());
-        holder.mDoctorName.setText("Dr. " + myBookingList.get(i).getRegistredDoctorName());
-        holder.mPatientName.setText("Patient Name: " + myBookingList.get(i).getPatientName());
+        holder.mDoctorName.setText("With Dr. " + myBookingList.get(i).getRegistredDoctorName());
+        holder.mPatientName.setText("Dear: " + myBookingList.get(i).getPatientName());
         holder.mSlot.setText("Slot: " + myBookingList.get(i).getSlot());
         holder.mAge.setText("Age: " + myBookingList.get(i).getPatientAge());
         holder.mGender.setText("Gender: " + myBookingList.get(i).getPatientGender());
         holder.mPhoneNo.setText("Phone No: " + myBookingList.get(i).getPatientPhoneNo());
         holder.mAddress.setText("Address: " + myBookingList.get(i).getPatientAddress());
+        holder.mAppointmentDate.setText("Date: " + myBookingList.get(i).getAppointmentDate());
 
     }
 
@@ -59,7 +60,7 @@ public class MyBookingAdapter extends RecyclerView.Adapter<BookingViewHolder> {
 
 class BookingViewHolder extends RecyclerView.ViewHolder{
 
-    TextView mBookingDate,mBookingTime,mDoctorName,mPatientName,mSlot,mAge,mGender,mPhoneNo,mAddress;
+    TextView mBookingDate,mBookingTime,mDoctorName,mPatientName,mSlot,mAge,mGender,mPhoneNo,mAddress,mAppointmentDate;
 
     public BookingViewHolder(@NonNull View itemView) {
         super(itemView);
@@ -72,5 +73,7 @@ class BookingViewHolder extends RecyclerView.ViewHolder{
         mGender = itemView.findViewById(R.id.tvGender);
         mPhoneNo = itemView.findViewById(R.id.tvPhoneNo);
         mAddress = itemView.findViewById(R.id.tvAddress);
+        mAppointmentDate = itemView.findViewById(R.id.tvDate);
+
     }
 }

@@ -4,19 +4,19 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp"
     >
 
     <TextView
-        android:id="@+id/tvDoctorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/amethysta"
-        android:text="Doctor Name"
+        android:text="Appointment Letter"
         android:textAlignment="center"
         android:textColor="#050505"
         android:textSize="30sp"
         android:textStyle="bold" />
+
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
                 android:textAlignment="textStart"
                 android:fontFamily="@font/amethysta"
                 android:textColor="#050505"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 android:textStyle="bold"
                 />
 
@@ -65,11 +65,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="textStart"
+                android:layout_marginLeft="15dp"
                 android:text="Booking Time"
                 android:textStyle="bold"
                 android:fontFamily="@font/amethysta"
                 android:textColor="#050505"
-                android:textSize="15sp"
+                android:textSize="12sp"
                 />
 
         </LinearLayout>
@@ -89,24 +90,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/amethysta"
-                        android:layout_marginTop="50dp"
+                        android:layout_marginTop="10dp"
                         android:textColor="#050505"
                         android:drawablePadding="10dp"
                         android:text="Patient Name"
-                        android:textSize="19sp"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
-
-                    <TextView
-                        android:id="@+id/tvSlot"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="#050505"
-                        android:fontFamily="@font/amethysta"
-                        android:text="Slot"
-                        android:layout_marginTop="5dp"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvAge"
@@ -151,9 +141,117 @@
                         android:text="PhoneNo"
                         android:textColor="#050505"
                         android:layout_marginTop="5dp"
-                        android:layout_marginBottom="50dp"
                         android:textStyle="bold"
                         android:textSize="14sp" />
+
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="------------------------------------------------------------------------------------------------------------"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="Your appointment is scheduled for: "
+        android:layout_marginLeft="35dp"
+        android:textColor="#050505"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#050505"
+        android:fontFamily="@font/amethysta"
+        android:text="Date"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#050505"
+        android:fontFamily="@font/amethysta"
+        android:text="Slot"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvDoctorName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="Doctor Name"
+        android:layout_marginLeft="35dp"
+        android:textColor="#050505"
+        android:layout_marginTop="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="------------------------------------------------------------------------------------------------------------"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="Please bring the following with you to your appointment:"
+        android:textColor="#050505"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="->Valid photo ID"
+        android:textColor="#050505"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="->Respective appointment letter"
+        android:textColor="#050505"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="*Please arrive yearly before your appointment"
+        android:textAlignment="textEnd"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -161,5 +259,5 @@
         android:text="------------------------------------------------------------------------------------------------------------"
         />
 
-                </LinearLayout>
 
+</LinearLayout>

@@ -2,6 +2,7 @@ package com.example.demo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,8 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.demo.Model.MyDateFragment;
 import com.example.demo.Model.PatientBookingDetails;
 import com.example.demo.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +33,7 @@ public class PatientDetails extends AppCompatActivity {
     private Button confirmBkngBtn;
     private RadioButton radioButtonMorning,radioButtonNoon,radioButtonEvening;
     String slot = "";
+    public static EditText dateText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +51,8 @@ public class PatientDetails extends AppCompatActivity {
         addressEditText = (EditText) findViewById(R.id.patient_address);
         ageEditText = (EditText) findViewById(R.id.patient_age);
 
+
+        dateText = (EditText) findViewById(R.id.appointment_date);
 
         confirmBkngBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,10 +99,26 @@ public class PatientDetails extends AppCompatActivity {
         {
             Toast.makeText(this, "Please provide your address.", Toast.LENGTH_SHORT).show();
         }
+        else if (TextUtils.isEmpty(dateText.getText().toString()))
+        {
+            Toast.makeText(this, "Please pick your appointment date.", Toast.LENGTH_SHORT).show();
+        }
         else
         {
             ConfirmBooking();
         }
+    }
+
+    public void btn_pickDate(View view) {
+
+        DialogFragment fragment = new MyDateFragment();
+        fragment.show(getSupportFragmentManager(),"date picker");
+
+    }
+
+    public static void populateSetDateText(int year,int month,int day){
+
+        dateText.setText(day+ "-" +month+ "-" +year);
     }
 
     private void ConfirmBooking() {
@@ -130,7 +152,8 @@ public class PatientDetails extends AppCompatActivity {
                 genderEditText.getText().toString(),
                 ageEditText.getText().toString(),
                 phoneEditText.getText().toString(),
-                addressEditText.getText().toString()
+                addressEditText.getText().toString(),
+                dateText.getText().toString()
         );
 
         String myCurrentDateTime = DateFormat.getDateTimeInstance()
@@ -159,6 +182,7 @@ public class PatientDetails extends AppCompatActivity {
             }
         });
     }
+
 
 }
 

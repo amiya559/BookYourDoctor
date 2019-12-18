@@ -2,13 +2,13 @@ package com.example.demo.Model;
 
 public class PatientBookingDetails {
 
-    private String currentOnlineUser,bookingDate,bookingTime,slot,registredDoctorName,patientName,patientGender,patientAge,patientPhoneNo,patientAddress;
+    private String currentOnlineUser,bookingDate,bookingTime,slot,registredDoctorName,patientName,patientGender,patientAge,patientPhoneNo,patientAddress,appointmentDate;
 
     public PatientBookingDetails() {
 
     }
 
-    public PatientBookingDetails(String currentOnlineUser, String bookingDate, String bookingTime, String slot, String registredDoctorName, String patientName, String patientGender, String patientAge, String patientPhoneNo, String patientAddress) {
+    public PatientBookingDetails(String currentOnlineUser, String bookingDate, String bookingTime, String slot, String registredDoctorName, String patientName, String patientGender, String patientAge, String patientPhoneNo, String patientAddress, String appointmentDate) {
         this.currentOnlineUser = currentOnlineUser;
         this.bookingDate = bookingDate;
         this.bookingTime = bookingTime;
@@ -19,6 +19,7 @@ public class PatientBookingDetails {
         this.patientAge = patientAge;
         this.patientPhoneNo = patientPhoneNo;
         this.patientAddress = patientAddress;
+        this.appointmentDate = appointmentDate;
     }
 
     public String getCurrentOnlineUser() {
@@ -99,5 +100,13 @@ public class PatientBookingDetails {
 
     public void setPatientAddress(String patientAddress) {
         this.patientAddress = patientAddress;
+    }
+
+    public String getAppointmentDate() {
+        return appointmentDate;
+    }
+
+    public void setAppointmentDate(String appointmentDate) {
+        this.appointmentDate = appointmentDate;
     }
 }

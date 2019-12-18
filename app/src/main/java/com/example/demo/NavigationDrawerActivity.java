@@ -150,9 +150,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
             Intent intent = new Intent(NavigationDrawerActivity.this,AppointmentLetter.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_print_appointment_letter) {
+        }
 
-        } else if (id == R.id.nav_settings) {
+        else if (id == R.id.nav_settings) {
 
             Intent intent = new Intent(NavigationDrawerActivity.this,SettinsActivity.class);
             startActivity(intent);
