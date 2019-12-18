@@ -4,56 +4,92 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:padding="10dp"
     >
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/myCardView"
+    <TextView
+        android:id="@+id/tvDoctorName"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardElevation="3dp"
-        android:layout_margin="4dp"
-        app:cardUseCompatPadding="true"
-        >
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amethysta"
+        android:text="Doctor Name"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="------------------------------------------------------------------------------------------------------------"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="2"
+        android:layout_weight="3">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="match_parent">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvDoctorName"
+                android:id="@+id/booking_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/maven_pro_medium"
+                android:text="Booking Date"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/amethysta"
                 android:textColor="#050505"
-                android:maxLines="1"
-                android:text="Doctor Name"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textSize="15sp"
+                android:textStyle="bold"
+                />
 
 
-            <LinearLayout
-                android:layout_marginTop="50dp"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/booking_time"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:weightSum="2"
-                android:layout_weight="3"
-                >
+                android:layout_height="wrap_content"
+                android:textAlignment="textStart"
+                android:text="Booking Time"
+                android:textStyle="bold"
+                android:fontFamily="@font/amethysta"
+                android:textColor="#050505"
+                android:textSize="15sp"
+                />
 
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1.2"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="------------------------------------------------------------------------------------------------------------"
+        android:textColor="#050505"
+        android:textStyle="bold"
+        />
 
 
                     <TextView
                         android:id="@+id/tvPatientName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/maven_pro_medium"
+                        android:fontFamily="@font/amethysta"
+                        android:layout_marginTop="50dp"
                         android:textColor="#050505"
                         android:drawablePadding="10dp"
                         android:text="Patient Name"
@@ -65,9 +101,8 @@
                         android:id="@+id/tvSlot"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="10dp"
                         android:textColor="#050505"
-                        android:fontFamily="@font/maven_pro_medium"
+                        android:fontFamily="@font/amethysta"
                         android:text="Slot"
                         android:layout_marginTop="5dp"
                         android:textSize="14sp"
@@ -77,72 +112,54 @@
                         android:id="@+id/tvAge"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="7dp"
-                        android:textStyle="bold"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:drawablePadding="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#050505"
+                        android:fontFamily="@font/amethysta"
                         android:text="Age"
+                        android:textStyle="bold"
                         android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/tvGender"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="5dp"
                         android:text="Gender"
-                        android:fontFamily="@font/maven_pro_medium"
-                        android:drawablePadding="10dp"
+                        android:textColor="#050505"
+                        android:fontFamily="@font/amethysta"
                         android:textStyle="bold"
                         android:maxLines="2"
                         android:textSize="14sp" />
 
-
-
-
-                </LinearLayout>
-
-
-
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight=".8"
-                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tvAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Address"
-                        android:drawablePadding="10dp"
-                        android:fontFamily="@font/maven_pro_medium"
+                        android:textColor="#050505"
+                        android:fontFamily="@font/amethysta"
                         android:textSize="14sp"
-                        android:layout_marginTop="17dp"
+                        android:layout_marginTop="5dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvPhoneNo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/maven_pro_medium"
+                        android:fontFamily="@font/amethysta"
                         android:text="PhoneNo"
-                        android:drawablePadding="10dp"
+                        android:textColor="#050505"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="50dp"
                         android:textStyle="bold"
                         android:textSize="14sp" />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:text="------------------------------------------------------------------------------------------------------------"
+        />
 
                 </LinearLayout>
 
-
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-
-
-    </androidx.cardview.widget.CardView>
-
-</LinearLayout>

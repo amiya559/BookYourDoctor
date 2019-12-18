@@ -112,12 +112,18 @@ public class PatientDetails extends AppCompatActivity {
         SimpleDateFormat currentDate = new SimpleDateFormat("MMM dd, yyyy");
         saveCurrentDate = currentDate.format(calForDate.getTime());
 
-        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
+        String currentUserPhone = Prevalent.currentOnlineUser.getPhone();
+
+
+        SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss");
         saveCurrentTime = currentTime.format(calForDate.getTime());
 
 
         PatientBookingDetails bookingDetails = new PatientBookingDetails(
 
+                currentUserPhone,
+                saveCurrentDate,
+                saveCurrentTime,
                 slot,
                 doctorNameEditText.getText().toString(),
                 patientNameEditText.getText().toString(),
@@ -127,11 +133,12 @@ public class PatientDetails extends AppCompatActivity {
                 addressEditText.getText().toString()
         );
 
-
+        String myCurrentDateTime = DateFormat.getDateTimeInstance()
+                .format(Calendar.getInstance().getTime());
 
 
         FirebaseDatabase.getInstance().getReference("Booking")
-                .child(Prevalent.currentOnlineUser.getPhone()).setValue(bookingDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+                .child(myCurrentDateTime).setValue(bookingDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
 

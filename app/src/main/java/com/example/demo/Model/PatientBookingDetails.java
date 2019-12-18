@@ -2,13 +2,16 @@ package com.example.demo.Model;
 
 public class PatientBookingDetails {
 
-    private String slot,registredDoctorName,patientName,patientGender,patientAge,patientPhoneNo,patientAddress;
+    private String currentOnlineUser,bookingDate,bookingTime,slot,registredDoctorName,patientName,patientGender,patientAge,patientPhoneNo,patientAddress;
 
     public PatientBookingDetails() {
 
     }
 
-    public PatientBookingDetails(String slot, String registredDoctorName, String patientName, String patientGender, String patientAge, String patientPhoneNo, String patientAddress) {
+    public PatientBookingDetails(String currentOnlineUser, String bookingDate, String bookingTime, String slot, String registredDoctorName, String patientName, String patientGender, String patientAge, String patientPhoneNo, String patientAddress) {
+        this.currentOnlineUser = currentOnlineUser;
+        this.bookingDate = bookingDate;
+        this.bookingTime = bookingTime;
         this.slot = slot;
         this.registredDoctorName = registredDoctorName;
         this.patientName = patientName;
@@ -16,6 +19,30 @@ public class PatientBookingDetails {
         this.patientAge = patientAge;
         this.patientPhoneNo = patientPhoneNo;
         this.patientAddress = patientAddress;
+    }
+
+    public String getCurrentOnlineUser() {
+        return currentOnlineUser;
+    }
+
+    public void setCurrentOnlineUser(String currentOnlineUser) {
+        this.currentOnlineUser = currentOnlineUser;
+    }
+
+    public String getBookingDate() {
+        return bookingDate;
+    }
+
+    public void setBookingDate(String bookingDate) {
+        this.bookingDate = bookingDate;
+    }
+
+    public String getBookingTime() {
+        return bookingTime;
+    }
+
+    public void setBookingTime(String bookingTime) {
+        this.bookingTime = bookingTime;
     }
 
     public String getSlot() {

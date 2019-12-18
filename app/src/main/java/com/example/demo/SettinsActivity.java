@@ -38,6 +38,7 @@ public class SettinsActivity extends AppCompatActivity {
     private EditText fullNameEditText, userPhoneEditText, addressEditText;
     private TextView profileChangeTextBtn,  closeTextBtn, saveTextButton;
 
+
     private Uri imageUri;
     private String myUrl = "";
     private StorageTask uploadTask;

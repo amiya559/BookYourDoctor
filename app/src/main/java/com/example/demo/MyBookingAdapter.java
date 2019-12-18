@@ -39,13 +39,15 @@ public class MyBookingAdapter extends RecyclerView.Adapter<BookingViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull BookingViewHolder holder, int i) {
 
-        holder.mDoctorName.setText(myBookingList.get(i).getRegistredDoctorName());
-        holder.mPatientName.setText(myBookingList.get(i).getPatientName());
-        holder.mSlot.setText(myBookingList.get(i).getSlot());
-        holder.mAge.setText(myBookingList.get(i).getPatientAge());
-        holder.mGender.setText(myBookingList.get(i).getPatientGender());
-        holder.mPhoneNo.setText(myBookingList.get(i).getPatientPhoneNo());
-        holder.mAddress.setText(myBookingList.get(i).getPatientAddress());
+        holder.mBookingDate.setText("Booking Date: " + myBookingList.get(i).getBookingDate());
+        holder.mBookingTime.setText("Booking Time: " + myBookingList.get(i).getBookingTime());
+        holder.mDoctorName.setText("Dr. " + myBookingList.get(i).getRegistredDoctorName());
+        holder.mPatientName.setText("Patient Name: " + myBookingList.get(i).getPatientName());
+        holder.mSlot.setText("Slot: " + myBookingList.get(i).getSlot());
+        holder.mAge.setText("Age: " + myBookingList.get(i).getPatientAge());
+        holder.mGender.setText("Gender: " + myBookingList.get(i).getPatientGender());
+        holder.mPhoneNo.setText("Phone No: " + myBookingList.get(i).getPatientPhoneNo());
+        holder.mAddress.setText("Address: " + myBookingList.get(i).getPatientAddress());
 
     }
 
@@ -57,10 +59,12 @@ public class MyBookingAdapter extends RecyclerView.Adapter<BookingViewHolder> {
 
 class BookingViewHolder extends RecyclerView.ViewHolder{
 
-    TextView mDoctorName,mPatientName,mSlot,mAge,mGender,mPhoneNo,mAddress;
+    TextView mBookingDate,mBookingTime,mDoctorName,mPatientName,mSlot,mAge,mGender,mPhoneNo,mAddress;
 
     public BookingViewHolder(@NonNull View itemView) {
         super(itemView);
+        mBookingDate = itemView.findViewById(R.id.booking_date);
+        mBookingTime = itemView.findViewById(R.id.booking_time);
         mDoctorName = itemView.findViewById(R.id.tvDoctorName);
         mPatientName = itemView.findViewById(R.id.tvPatientName);
         mSlot = itemView.findViewById(R.id.tvSlot);

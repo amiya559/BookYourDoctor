@@ -27,13 +27,11 @@ public class AppointmentLetter extends AppCompatActivity {
     RecyclerView mRecyclerview;
     List<PatientBookingDetails> myBookingList;
 
-    private String parentDbName = "Booking";
-
     ProgressDialog progressDialog;
 
 
-   // private DatabaseReference databaseReference;
-    // private ValueEventListener eventListener;
+    private DatabaseReference databaseReference;
+    private ValueEventListener eventListener;
 
     MyBookingAdapter myAdapter;
 
@@ -101,35 +99,36 @@ public class AppointmentLetter extends AppCompatActivity {
 
          */
 
-
-        final DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child(parentDbName).child(Prevalent.currentOnlineUser.getPhone());
+        databaseReference = FirebaseDatabase.getInstance().getReference("Booking");
         progressDialog.show();
 
-        databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+        eventListener = databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if (dataSnapshot.child(parentDbName).child(Prevalent.currentOnlineUser.getPhone()).exists()) {
+                // if (dataSnapshot.child(parentDbName).child(Prevalent.currentOnlineUser.getPhone()).exists()) {
+                //PatientBookingDetails patientBookingDetails = dataSnapshot.getValue(PatientBookingDetails.class);
+
+               // if (patientBookingDetails.getCurrentOnlineUser().equals(Prevalent.currentOnlineUser.getPhone())) {
 
                     myBookingList.clear();
 
                     for (DataSnapshot itemSnapShot : dataSnapshot.getChildren()) {
 
-                        PatientBookingDetails patientBookingDetails = itemSnapShot.child(parentDbName).child(Prevalent.currentOnlineUser.getPhone()).getValue(PatientBookingDetails.class);
+                        PatientBookingDetails patientBookingDetails = itemSnapShot.getValue(PatientBookingDetails.class);
+                        if (patientBookingDetails.getCurrentOnlineUser().equals(Prevalent.currentOnlineUser.getPhone())) {
 
-                        myBookingList.add(patientBookingDetails);
+                            myBookingList.add(patientBookingDetails);
 
+                        } else {
+                            Toast.makeText(AppointmentLetter.this, "Your Booked Doctors Shown Here.", Toast.LENGTH_SHORT).show();
+                            progressDialog.dismiss();
+                        }
 
                     }
-
                     myAdapter.notifyDataSetChanged();
                     progressDialog.dismiss();
-                }else {
-                    Toast.makeText(AppointmentLetter.this, "You have not booked yet..Let Book a doctor.", Toast.LENGTH_SHORT).show();
-                    progressDialog.dismiss();
                 }
-
-            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {

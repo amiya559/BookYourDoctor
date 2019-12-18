@@ -73,7 +73,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Full Name"
+            android:hint="Patient Full Name"
             android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:id="@+id/patient_name"
@@ -83,8 +83,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Age"
+            android:hint="Patient Age"
             android:textSize="15sp"
+            android:inputType="number"
             android:layout_marginTop="10dp"
             android:id="@+id/patient_age"
             />
@@ -92,7 +93,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Gender"
+            android:hint="Patient Gender"
             android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:id="@+id/patient_gender"
@@ -101,8 +102,9 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Phone No"
+            android:hint="Patient Phone No"
             android:textSize="15sp"
+            android:inputType="number"
             android:layout_marginTop="10dp"
             android:id="@+id/patient_phone_number"
             />
@@ -110,7 +112,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Address"
+            android:hint="Patient Full Address"
             android:textSize="15sp"
             android:layout_marginTop="10dp"
             android:id="@+id/patient_address"
