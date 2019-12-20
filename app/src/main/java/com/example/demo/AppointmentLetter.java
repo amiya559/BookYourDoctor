@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.demo.Model.PatientBookingDetails;
@@ -116,6 +117,9 @@ public class AppointmentLetter extends AppCompatActivity {
                     for (DataSnapshot itemSnapShot : dataSnapshot.getChildren()) {
 
                         PatientBookingDetails patientBookingDetails = itemSnapShot.getValue(PatientBookingDetails.class);
+
+                        patientBookingDetails.setKey(itemSnapShot.getKey());
+
                         if (patientBookingDetails.getCurrentOnlineUser().equals(Prevalent.currentOnlineUser.getPhone())) {
 
                             myBookingList.add(patientBookingDetails);
@@ -137,4 +141,6 @@ public class AppointmentLetter extends AppCompatActivity {
         });
 
     }
+
+
 }

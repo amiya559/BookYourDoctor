@@ -8,6 +8,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -29,7 +30,7 @@ public class Upload_Doctors extends AppCompatActivity {
 
     ImageView doctorImage;
     Uri uri;
-    EditText txt_name,txt_specialization,txt_gender,txt_locations,txt_days,txt_price,txt_description;
+    EditText txt_name, txt_specialization, txt_gender, txt_locations, txt_days, txt_price, txt_description;
     String imageUrl;
 
     @Override
@@ -37,7 +38,7 @@ public class Upload_Doctors extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload__doctors);
 
-        doctorImage = (ImageView)findViewById(R.id.iv_doctorImage);
+        doctorImage = (ImageView) findViewById(R.id.iv_doctorImage);
         txt_name = (EditText) findViewById(R.id.txt_doctor_name);
         txt_specialization = (EditText) findViewById(R.id.text_specialization);
         txt_gender = (EditText) findViewById(R.id.txt_doctor_gender);
@@ -52,23 +53,21 @@ public class Upload_Doctors extends AppCompatActivity {
 
         Intent photoPicker = new Intent(Intent.ACTION_PICK);
         photoPicker.setType("image/*");
-        startActivityForResult(photoPicker,1);
+        startActivityForResult(photoPicker, 1);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(resultCode == RESULT_OK){
+        if (resultCode == RESULT_OK) {
             uri = data.getData();
             doctorImage.setImageURI(uri);
-        }
-
-        else Toast.makeText(this, "You Have Not Picked Any Image", Toast.LENGTH_SHORT).show();
+        } else Toast.makeText(this, "You Have Not Picked Any Image", Toast.LENGTH_SHORT).show();
 
     }
 
-    public void uploadImage(){
+    public void uploadImage() {
 
         StorageReference storageReference = FirebaseStorage.getInstance().getReference().child("DoctorsImage")
                 .child(uri.getLastPathSegment());
@@ -82,7 +81,7 @@ public class Upload_Doctors extends AppCompatActivity {
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
                 Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-                while (!uriTask.isComplete());
+                while (!uriTask.isComplete()) ;
                 Uri urlImage = uriTask.getResult();
                 imageUrl = urlImage.toString();
                 uploadDoctors();
@@ -101,7 +100,24 @@ public class Upload_Doctors extends AppCompatActivity {
     }
 
     public void btnUploadDoctors(View view) {
-        uploadImage();
+
+        if (TextUtils.isEmpty(txt_name.getText().toString())) {
+            Toast.makeText(this, "Please provide doctor full name.", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(txt_specialization.getText().toString())) {
+            Toast.makeText(this, "Please provide doctor specialization.", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(txt_gender.getText().toString())) {
+            Toast.makeText(this, "Please provide gender.", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(txt_locations.getText().toString())) {
+            Toast.makeText(this, "Please provide a short description.", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(txt_days.getText().toString())) {
+            Toast.makeText(this, "Please provide on which days you are going to this clinic.", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(txt_price.getText().toString())) {
+            Toast.makeText(this, "Please provide your fee.", Toast.LENGTH_SHORT).show();
+        } else if (TextUtils.isEmpty(txt_description.getText().toString())) {
+            Toast.makeText(this, "Please provide the location of that pharmacy with its full address.", Toast.LENGTH_SHORT).show();
+        } else {
+            uploadImage();
+        }
     }
 
     public void uploadDoctors(){

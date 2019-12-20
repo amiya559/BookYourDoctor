@@ -6,258 +6,132 @@
     android:layout_height="wrap_content"
     >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/amethysta"
-        android:text="Appointment Letter"
-        android:textAlignment="center"
-        android:textColor="#050505"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-
-
-    <TextView
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:text="------------------------------------------------------------------------------------------------------------"
-        android:textColor="#050505"
-        android:textStyle="bold"
-        />
+        android:layout_height="match_parent"
+        app:cardElevation="1dp"
+        app:cardUseCompatPadding="true"
+        >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:weightSum="2"
-        android:layout_weight="3">
 
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amethysta"
+                android:text="Appointment Letter"
+                android:textAlignment="center"
+                android:textColor="#050505"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="------------------------------------------------------------------------------------------------------------"
+                android:textColor="#050505"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/booking_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/amethysta"
                 android:text="Booking Date"
                 android:textAlignment="textStart"
-                android:fontFamily="@font/amethysta"
                 android:textColor="#050505"
-                android:textSize="12sp"
-                android:textStyle="bold"
-                />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="vertical">
+                android:textSize="10sp"
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/booking_time"
+                android:id="@+id/tvPatientName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="textStart"
-                android:layout_marginLeft="15dp"
-                android:text="Booking Time"
-                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="10dp"
                 android:fontFamily="@font/amethysta"
+                android:text="Patient Name"
                 android:textColor="#050505"
-                android:textSize="12sp"
-                />
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="35dp"
+                android:maxLines="1"
+                android:text="------------------------------------------------------------------------------------------------------------" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:fontFamily="@font/amethysta"
+                android:text="Your appointment is scheduled on: "
+                android:textColor="#050505"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/amethysta"
+                android:text="Date"
+                android:textColor="#050505"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSlot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/amethysta"
+                android:text="Slot"
+                android:textColor="#050505"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/amethysta"
+                android:text="Doctor Name"
+                android:textColor="#050505"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="35dp"
+                android:maxLines="1"
+                android:text="------------------------------------------------------------------------------------------------------------" />
+
 
         </LinearLayout>
-    </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:text="------------------------------------------------------------------------------------------------------------"
-        android:textColor="#050505"
-        android:textStyle="bold"
-        />
 
 
-                    <TextView
-                        android:id="@+id/tvPatientName"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/amethysta"
-                        android:layout_marginTop="10dp"
-                        android:textColor="#050505"
-                        android:drawablePadding="10dp"
-                        android:text="Patient Name"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
-
-
-                    <TextView
-                        android:id="@+id/tvAge"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:textColor="#050505"
-                        android:fontFamily="@font/amethysta"
-                        android:text="Age"
-                        android:textStyle="bold"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/tvGender"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="Gender"
-                        android:textColor="#050505"
-                        android:fontFamily="@font/amethysta"
-                        android:textStyle="bold"
-                        android:maxLines="2"
-                        android:textSize="14sp" />
-
-
-                    <TextView
-                        android:id="@+id/tvAddress"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Address"
-                        android:textColor="#050505"
-                        android:fontFamily="@font/amethysta"
-                        android:textSize="14sp"
-                        android:layout_marginTop="5dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tvPhoneNo"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/amethysta"
-                        android:text="PhoneNo"
-                        android:textColor="#050505"
-                        android:layout_marginTop="5dp"
-                        android:textStyle="bold"
-                        android:textSize="14sp" />
-
-
-    <TextView
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="35dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:text="------------------------------------------------------------------------------------------------------------"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/amethysta"
-        android:text="Your appointment is scheduled for: "
-        android:layout_marginLeft="35dp"
-        android:textColor="#050505"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#050505"
-        android:fontFamily="@font/amethysta"
-        android:text="Date"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="5dp"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvSlot"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#050505"
-        android:fontFamily="@font/amethysta"
-        android:text="Slot"
-        android:layout_marginLeft="35dp"
-        android:layout_marginTop="5dp"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/tvDoctorName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/amethysta"
-        android:text="Doctor Name"
-        android:layout_marginLeft="35dp"
-        android:textColor="#050505"
-        android:layout_marginTop="5dp"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="35dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:text="------------------------------------------------------------------------------------------------------------"
-        />
-
-    <TextView
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/amethysta"
-        android:text="Please bring the following with you to your appointment:"
-        android:textColor="#050505"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/amethysta"
-        android:text="->Valid photo ID"
-        android:textColor="#050505"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/amethysta"
-        android:text="->Respective appointment letter"
-        android:textColor="#050505"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/amethysta"
-        android:text="*Please arrive yearly before your appointment"
-        android:textAlignment="textEnd"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="1"
-        android:text="------------------------------------------------------------------------------------------------------------"
-        />
-
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
+

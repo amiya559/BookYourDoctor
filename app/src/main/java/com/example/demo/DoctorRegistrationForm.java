@@ -78,7 +78,7 @@ public class DoctorRegistrationForm extends AppCompatActivity {
 
                                     } else {
 
-                                        Toast.makeText(DoctorRegistrationForm.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(DoctorRegistrationForm.this, "Account with this email already exist,Authentication Failed", Toast.LENGTH_SHORT).show();
                                     }
 
                                     // ...

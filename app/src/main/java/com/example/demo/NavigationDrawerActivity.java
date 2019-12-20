@@ -147,6 +147,7 @@ public class NavigationDrawerActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_appointment) {
+            Toast.makeText(NavigationDrawerActivity.this, "Your Booked Doctors Shown Here.", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(NavigationDrawerActivity.this,AppointmentLetter.class);
             startActivity(intent);
 

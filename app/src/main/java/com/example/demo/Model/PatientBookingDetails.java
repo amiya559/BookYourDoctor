@@ -3,6 +3,7 @@ package com.example.demo.Model;
 public class PatientBookingDetails {
 
     private String currentOnlineUser,bookingDate,bookingTime,slot,registredDoctorName,patientName,patientGender,patientAge,patientPhoneNo,patientAddress,appointmentDate;
+    private String key;
 
     public PatientBookingDetails() {
 
@@ -108,5 +109,13 @@ public class PatientBookingDetails {
 
     public void setAppointmentDate(String appointmentDate) {
         this.appointmentDate = appointmentDate;
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 }

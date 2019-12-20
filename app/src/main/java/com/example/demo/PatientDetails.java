@@ -167,7 +167,7 @@ public class PatientDetails extends AppCompatActivity {
 
                 if (task.isSuccessful()){
                     Toast.makeText(PatientDetails.this, "your appointment has been booked successfully.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PatientDetails.this, AppointmentLetter.class);
+                    Intent intent = new Intent(PatientDetails.this, DetailAppointmentLetter.class);
                     startActivity(intent);
                     progressDialog.dismiss();
                     finish();

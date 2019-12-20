@@ -131,6 +131,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="15sp"
+            android:background="@drawable/round_btn"
+            android:textColor="#FF6C02"
             android:layout_marginTop="10dp"
             android:id="@+id/pick_appointment_date"
             android:text="Pick Date"
