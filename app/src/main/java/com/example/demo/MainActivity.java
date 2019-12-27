@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -30,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        checkConnection();
 
         joinNowButton = (Button) findViewById(R.id.main_join_now_btn);
         loginButton = (Button) findViewById(R.id.main_login_btn);
@@ -73,6 +78,33 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    // Checking internet connection
+
+    public void checkConnection(){
+
+        ConnectivityManager manager = (ConnectivityManager)
+                getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo activeNetwork = manager.getActiveNetworkInfo();
+
+        if (null != activeNetwork){
+            if(activeNetwork.getType() == ConnectivityManager.TYPE_WIFI){
+                Toast.makeText(this, "Wifi Enabled", Toast.LENGTH_SHORT).show();
+            }
+            else if(activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE){
+                Toast.makeText(this, "Data Network Enabled", Toast.LENGTH_SHORT).show();
+            }
+
+        }
+        else {
+            Intent intent = new Intent(MainActivity.this,NoInternetConnectionLottieAnimation.class);
+            startActivity(intent);
+        }
+    }
+
+
+
 
     private void AllowAccess(final String phone,final String password) {
 

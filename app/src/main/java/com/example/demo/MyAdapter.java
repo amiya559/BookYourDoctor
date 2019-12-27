@@ -63,7 +63,7 @@ public class MyAdapter extends RecyclerView.Adapter<DoctorViewHolder>{
         doctorViewHolder.mdescription.setText(myDoctorList.get(i).getDescription());
 
 
-        // Display the detail of doctor by clicking on card
+        // Display the detail of appintro_search_doctor by clicking on card
         doctorViewHolder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

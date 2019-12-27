@@ -47,5 +47,12 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 
+    // Lottie Animation
+    implementation 'com.airbnb.android:lottie:3.3.1'
+
+    // App Intro
+    implementation 'com.github.AppIntro:AppIntro:5.1.0'
+
+
 }
 apply plugin: 'com.google.gms.google-services'

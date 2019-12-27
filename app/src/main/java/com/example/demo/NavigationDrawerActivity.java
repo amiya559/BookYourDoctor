@@ -147,7 +147,6 @@ public class NavigationDrawerActivity extends AppCompatActivity
             startActivity(intent);
 
         } else if (id == R.id.nav_appointment) {
-            Toast.makeText(NavigationDrawerActivity.this, "Your Booked Doctors Shown Here.", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(NavigationDrawerActivity.this,AppointmentLetter.class);
             startActivity(intent);
 
@@ -164,17 +163,25 @@ public class NavigationDrawerActivity extends AppCompatActivity
         else if (id == R.id.nav_logout){
 
             Paper.book().destroy();
-            Intent intent = new Intent(NavigationDrawerActivity.this,MainActivity.class);
+            Intent intent = new Intent(NavigationDrawerActivity.this,MyAppIntro.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
             Toast.makeText(this, "Logged Out Successfully", Toast.LENGTH_SHORT).show();
         }
 
+        else if (id == R.id.nav_login_with_another_accout) {
+
+            Intent intent = new Intent(NavigationDrawerActivity.this,LoginActivity.class);
+            startActivity(intent);
+
+        }
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 
     public void dasboardImageBtn(View view) {
         Intent intent=new Intent(NavigationDrawerActivity.this,CreateDoctorProfile.class);

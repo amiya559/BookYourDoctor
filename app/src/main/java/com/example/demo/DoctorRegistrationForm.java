@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,9 +49,20 @@ public class DoctorRegistrationForm extends AppCompatActivity {
                 String stringPswrd = signupPswrd.getText().toString().trim();
                 String stringCnfPswrd = confirmPswrd.getText().toString().trim();
 
-                if (stringEmail.isEmpty() ||  stringPswrd.isEmpty() || stringCnfPswrd.isEmpty()) {
-                    Toast.makeText(DoctorRegistrationForm.this, "Fields can't be blank", Toast.LENGTH_LONG).show();
+               if (TextUtils.isEmpty(stringEmail)){
+                   Toast.makeText(DoctorRegistrationForm.this, "Please enter email.....", Toast.LENGTH_SHORT).show();
+                   return;
+               }
+               if (TextUtils.isEmpty(stringPswrd)){
+                    Toast.makeText(DoctorRegistrationForm.this, "Please enter password.....", Toast.LENGTH_SHORT).show();
+                    return;
                 }
+
+               if (TextUtils.isEmpty(stringEmail)){
+                    Toast.makeText(DoctorRegistrationForm.this, "Please confirm password....", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
 
                 progressBar.setVisibility(View.VISIBLE);
 

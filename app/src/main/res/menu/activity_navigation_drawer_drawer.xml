@@ -32,11 +32,19 @@
         <item
             android:id="@+id/nav_logout"
             android:iconTint="#fff"
-            android:icon="@drawable/ic_exit_to_app_black_24dp"
+            android:icon="@drawable/ic_logout"
             android:title="Logout" />
+
+
+        <item
+            android:id="@+id/nav_login_with_another_accout"
+            android:iconTint="#fff"
+            android:icon="@drawable/ic_login"
+            android:title="Login With Another Account ? " />
+
 
     </group>
 
 
-
 </menu>
+

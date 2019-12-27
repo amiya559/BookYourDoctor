@@ -102,9 +102,9 @@ public class Upload_Doctors extends AppCompatActivity {
     public void btnUploadDoctors(View view) {
 
         if (TextUtils.isEmpty(txt_name.getText().toString())) {
-            Toast.makeText(this, "Please provide doctor full name.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please provide appintro_search_doctor full name.", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(txt_specialization.getText().toString())) {
-            Toast.makeText(this, "Please provide doctor specialization.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please provide appintro_search_doctor specialization.", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(txt_gender.getText().toString())) {
             Toast.makeText(this, "Please provide gender.", Toast.LENGTH_SHORT).show();
         } else if (TextUtils.isEmpty(txt_locations.getText().toString())) {

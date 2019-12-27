@@ -77,7 +77,7 @@ public class PatientDetails extends AppCompatActivity {
         }
         if (TextUtils.isEmpty(doctorNameEditText.getText().toString()))
         {
-            Toast.makeText(this, "Please provide the doctor name you are registering for.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please provide the appintro_search_doctor name you are registering for.", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(patientNameEditText.getText().toString()))
         {
@@ -167,7 +167,7 @@ public class PatientDetails extends AppCompatActivity {
 
                 if (task.isSuccessful()){
                     Toast.makeText(PatientDetails.this, "your appointment has been booked successfully.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(PatientDetails.this, DetailAppointmentLetter.class);
+                    Intent intent = new Intent(PatientDetails.this, PopActivity.class);
                     startActivity(intent);
                     progressDialog.dismiss();
                     finish();

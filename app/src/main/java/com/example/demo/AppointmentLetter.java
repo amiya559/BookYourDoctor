@@ -91,7 +91,7 @@ public class AppointmentLetter extends AppCompatActivity {
                     progressDialog.dismiss();
 
                 } else {
-                    Toast.makeText(AppointmentLetter.this, "You have not booked yet..Let Book a doctor.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AppointmentLetter.this, "You have not booked yet..Let Book a appintro_search_doctor.", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AppointmentLetter.this, NavigationDrawerActivity.class);
                     startActivity(intent);
                     progressDialog.dismiss();
