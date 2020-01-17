@@ -158,10 +158,13 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
+/*
 
     public void skip_btn(View view) {
         Intent intent=new Intent(MainActivity.this,CreateDoctorProfile.class);
         startActivity(intent);
     }
+
+
+ */
 }

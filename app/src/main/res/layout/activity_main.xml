@@ -121,6 +121,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/abhaya_libre_extrabold"
             android:text="Already have an account ?"
+            android:layout_marginBottom="10dp"
             android:textAlignment="center"
             android:textColor="#050505"
             android:textSize="20sp"
@@ -138,11 +139,14 @@
             android:textColor="#FF6C02"
             android:textStyle="bold"
             android:text="L o g i n   N o w"
+            android:layout_marginBottom="80dp"
             android:textSize="13sp" />
 
+    <!--
         <Space
             android:layout_width="match_parent"
             android:layout_height="10dp" />
+
 
         <TextView
             android:layout_width="match_parent"
@@ -170,6 +174,6 @@
         android:text="s k i p   N o w"
         android:textSize="13sp" />
 
-
+-->
 
     </LinearLayout>
