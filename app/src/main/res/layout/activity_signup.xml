@@ -115,8 +115,8 @@
             android:layout_centerVertical="true"
             android:fontFamily="@font/maven_pro_medium"
             android:text="C r e a t e"
-            android:textColor="#fff"
-            android:background="@drawable/round_button"
+            android:textColor="#FF6C02"
+            android:background="@drawable/round_btn"
             android:textAlignment="center"
             android:textSize="13sp"
             />
