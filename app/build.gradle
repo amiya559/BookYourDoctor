@@ -38,12 +38,19 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.firebase:firebase-analytics:17.2.0'
 
+    // circle image view
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    // NoSQL-like storage for Java/Kotlin objects
     implementation 'io.paperdb:paperdb:2.6'
+
+    //  powerful image downloading and caching library
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // image cropper
     api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
 
-
+    //  open source media management and image loading framework for Android
     implementation 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 
