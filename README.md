@@ -1,4 +1,6 @@
 # BookYourDoctor
+Academic Project (CSA,CET Bhubaneswar)
+
 BYD is more than an app for finding doctors. Whether it's viewing doctors’ profiles, booking doctor appointments, confirming appointments, cancelling appointments, BYD helps you find online medical services & solutions to enable you to take better care of yourself.
 
 Get the APK file here: https://github.com/amiya559/BookYourDoctor/tree/master/Get%20APK%20file
