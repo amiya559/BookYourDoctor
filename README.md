@@ -3,4 +3,6 @@ BYD is more than an app for finding doctors. Whether it's viewing doctors’ pro
 
 Get the APK file here: https://github.com/amiya559/BookYourDoctor/tree/master/Get%20APK%20file
 
+Get the full documentation file: https://github.com/amiya559/BookYourDoctor/blob/master/BYD%20FINAL%20DOCUMENT.pdf
+
 ![FINAL](https://user-images.githubusercontent.com/54852202/81508152-05935680-9320-11ea-9f15-d2b53bbd2782.jpg)
